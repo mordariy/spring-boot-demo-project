@@ -1,0 +1,19 @@
+### GET request all Users
+GET http://localhost:8085/user
+Accept: application/json
+
+
+### GET request User by ID
+GET http://localhost:8085/user/1
+Accept: application/json
+
+
+### Send POST request with json body
+POST http://localhost:8085/user
+Content-Type: application/json
+
+{
+  "name": "Petr",
+  "lastName": "Petrov",
+  "mobile" : "415263"
+}
