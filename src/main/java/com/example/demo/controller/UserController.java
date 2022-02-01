@@ -27,7 +27,17 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
-        return ResponseEntity.ok(userService.createUer(user));
+        return ResponseEntity.ok(userService.createUser(user));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<User> updateUserById(@PathVariable("id") int id, @RequestBody User user) {
+        return ResponseEntity.ok(userService.updateUserById(id, user));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<User> deleteUserById(@PathVariable("id") int id) {
+        return ResponseEntity.ok(userService.deleteUserById(id));
     }
 
 }
